@@ -1,5 +1,83 @@
-template-repository (1.0-1) unstable; urgency=medium
+scheme-bytestructures (2.0.2-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release.
+  * debian/watch: Update to use new URL.
+  * debian/control: Build-Depends: Use pkgconf instead of pkg-config.
+  * debian/control: Update to Standards-Version 4.7.0.
+  * debian/rules: Add dh_auto_clean override to remove cruft.
+    (Closes: #1045280)
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Vagrant Cascadian <vagrant@debian.org>  Fri, 09 Aug 2024 22:33:19 -0700
+
+scheme-bytestructures (2.0.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * debian/copyright: Update for 2.0.1.
+  * debian/rules: Disable parallelism to improve reproducibility.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Fri, 25 Mar 2022 12:05:40 -0700
+
+scheme-bytestructures (1.0.10-3) unstable; urgency=medium
+
+  * debian/control, debian/rules: Drop support for guile 2.2.
+    (Closes: #969696)
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Sat, 01 Jan 2022 20:29:11 -0800
+
+scheme-bytestructures (1.0.10-2) unstable; urgency=medium
+
+  * debian/control: Update Standards-Version to 4.6.0, no changes.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Tue, 07 Sep 2021 09:02:55 -0700
+
+scheme-bytestructures (1.0.10-1) experimental; urgency=medium
+
+  * New upstream release.
+  * debian/control: Update Standards-Version to 4.5.1, no changes needed.
+  * debian/control: Remove explicit branch from Vcs-Git.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Sat, 08 May 2021 17:11:05 -0700
+
+scheme-bytestructures (1.0.7-3) unstable; urgency=medium
+
+  * Build for both guile 3.0 and 2.2.
+  * debian/rules: Use longhand options for dh_dwz/dh_strip.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Sat, 31 Oct 2020 01:51:44 -0700
+
+scheme-bytestructures (1.0.7-2) experimental; urgency=medium
+
+  * debian/control:
+    - Update to guile 3.0.
+    - Update to Standards-Version 4.5.0, no changes.
+    - Upgrade to debhelper compat 13.
+  * Remove lintian overrides, not needed with newer lintian.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Sun, 05 Jul 2020 12:12:35 -0700
+
+scheme-bytestructures (1.0.7-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control:
+    - Update Standards-Version to 4.4.1, no changes needed.
+    - Set Rules-Requires-Root to "no".
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Fri, 10 Jan 2020 15:44:20 -0800
+
+scheme-bytestructures (1.0.6-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop patch to find unversioned "guild", Add versioned Build-Depends on
+    guile-2.2-dev.
+  * debian/copyright: Update copyright years (Closes: #932466).
+  * debian/control: Update Standards-Version to 4.4.0, no changes.
+  * debian/control: Update description, dropping "first-person" language.
+  * debian/control: Update Vcs-Git and Vcs-Browser.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Fri, 19 Jul 2019 18:35:34 -0300
+
+scheme-bytestructures (1.0.5-1) experimental; urgency=low
+
+  * Initial release. Closes: #929095.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Fri, 24 May 2019 18:12:49 -0700

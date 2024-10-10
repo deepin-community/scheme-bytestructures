@@ -1,15 +1,25 @@
-Source: template-repository
-Section: unknown
+Source: scheme-bytestructures
+Section: lisp
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Vagrant Cascadian <vagrant@debian.org>
+Build-Depends: debhelper-compat (=13),
+ guile-3.0-dev,
+ pkgconf,
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+Homepage: https://github.com/TaylanUB/scheme-bytestructures/
+Vcs-Git: https://salsa.debian.org/debian/scheme-bytestructures.git
+Vcs-Browser: https://salsa.debian.org/debian/scheme-bytestructures
 
-Package: template-repository
+Package: guile-bytestructures
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ guile-3.0,
+Description: Structured access to bytevector contents
+ This library offers a system imitating the type system of the C
+ programming language, to be used on bytevectors.  C's type system
+ works on raw memory, and bytestructures works on bytevectors which
+ are an abstraction over raw memory in Scheme.  The system is in fact
+ more powerful than the C type system, elevating types to first-class
+ status.
